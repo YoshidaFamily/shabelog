@@ -96,12 +96,6 @@ function initCategoryUI() {
     const categoryContainer = document.getElementById('category-container');
     if (!categoryContainer) return;
     
-    // 説明テキストを追加
-    const description = document.createElement('p');
-    description.className = 'category-description';
-    description.textContent = '※チェックを外したカテゴリのテーマは表示されません';
-    categoryContainer.appendChild(description);
-    
     // 全カテゴリのチェックボックスを作成
     Object.values(CATEGORIES).forEach(category => {
         const div = document.createElement('div');
