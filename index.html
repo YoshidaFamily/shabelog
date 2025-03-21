@@ -3,15 +3,49 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>しゃべログ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しゃべログ - トークテーマ提案アプリ</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 id="title_text">しゃべログ</h1>
-    <input type="button" value="シャッフル" onclick="shuffle();" />
-    <h2 id="thema1_text">a</h2>
-    <h2 id="thema2_text">b</h2>
-    <h2 id="thema3_text">c</h2>
+    <div class="container">
+        <header>
+            <h1 id="title_text">しゃべログ</h1>
+            <p class="subtitle">雑談のネタに困ったときのトークテーマ提案アプリ</p>
+        </header>
+
+        <section class="category-section">
+            <h2>カテゴリ選択</h2>
+            <div id="category-container" class="category-container">
+                <!-- カテゴリチェックボックスがJSで動的に追加されます -->
+            </div>
+        </section>
+
+        <section class="theme-section">
+            <div class="shuffle-container">
+                <button class="shuffle-button" onclick="shuffle();">シャッフル</button>
+            </div>
+            
+            <div class="themes-container">
+                <div class="theme-card">
+                    <h2 id="thema1_text" class="theme-text">テーマ1</h2>
+                </div>
+                <div class="theme-card">
+                    <h2 id="thema2_text" class="theme-text">テーマ2</h2>
+                </div>
+                <div class="theme-card">
+                    <h2 id="thema3_text" class="theme-text">テーマ3</h2>
+                </div>
+            </div>
+            
+            <p class="instruction">※テーマをクリックして選択できます</p>
+        </section>
+        
+        <footer>
+            <p>&copy; 2025 しゃべログ</p>
+        </footer>
+    </div>
 
     <script src="./script.js"></script>
 </body>
