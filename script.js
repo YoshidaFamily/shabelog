@@ -96,6 +96,44 @@ function initCategoryUI() {
     const categoryContainer = document.getElementById('category-container');
     if (!categoryContainer) return;
     
+    // カテゴリ選択の見出しを取得
+    const categorySection = document.querySelector('.category-section');
+    const categoryHeading = categorySection.querySelector('h2');
+    
+    // 見出しの横にボタンを配置するためのコンテナを作成
+    const headingContainer = document.createElement('div');
+    headingContainer.className = 'category-heading-container';
+    
+    // 全選択・全解除ボタンを作成
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'category-buttons';
+    
+    const selectAllButton = document.createElement('button');
+    selectAllButton.textContent = 'すべて選択';
+    selectAllButton.className = 'category-button';
+    selectAllButton.addEventListener('click', selectAllCategories);
+    
+    const deselectAllButton = document.createElement('button');
+    deselectAllButton.textContent = 'すべて解除';
+    deselectAllButton.className = 'category-button';
+    deselectAllButton.addEventListener('click', deselectAllCategories);
+    
+    // ボタンをボタンコンテナに追加
+    buttonContainer.appendChild(selectAllButton);
+    buttonContainer.appendChild(deselectAllButton);
+    
+    // 元の見出しを削除し、新しいコンテナに見出しとボタンを追加
+    categoryHeading.remove();
+    
+    const newHeading = document.createElement('h2');
+    newHeading.textContent = 'カテゴリ選択';
+    
+    headingContainer.appendChild(newHeading);
+    headingContainer.appendChild(buttonContainer);
+    
+    // 新しいコンテナをカテゴリセクションの先頭に追加
+    categorySection.insertBefore(headingContainer, categorySection.firstChild);
+    
     // 全カテゴリのチェックボックスを作成
     Object.values(CATEGORIES).forEach(category => {
         const div = document.createElement('div');
@@ -116,6 +154,24 @@ function initCategoryUI() {
         div.appendChild(label);
         categoryContainer.appendChild(div);
     });
+}
+
+// すべてのカテゴリを選択する関数
+function selectAllCategories() {
+    const checkboxes = document.querySelectorAll('#category-container input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = true;
+    });
+    updateEnabledCategories();
+}
+
+// すべてのカテゴリの選択を解除する関数
+function deselectAllCategories() {
+    const checkboxes = document.querySelectorAll('#category-container input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
+    updateEnabledCategories();
 }
 
 function updateEnabledCategories() {
