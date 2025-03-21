@@ -163,6 +163,10 @@ header {
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative; /* 「おすすめ！」ラベルの位置決めのため */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px; /* 最低の高さを設定 */
 }
 
 .theme-card:hover {
@@ -173,6 +177,7 @@ header {
 .theme-text {
     font-size: 1.2rem;
     color: #2c3e50;
+    width: 100%; /* カード全体を使用 */
 }
 
 .theme-card .theme-text.selected {
