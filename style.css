@@ -23,8 +23,8 @@ body {
 /* ヘッダー */
 header {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 20px 0;
+    margin-bottom: 20px;
+    padding: 15px 0;
     border-bottom: 2px solid #ddd;
 }
 
@@ -289,19 +289,24 @@ footer {
     
     #title_text {
         font-size: 1.5rem;
+        margin-bottom: 5px;
     }
     
     header {
-        margin-bottom: 15px;
-        padding: 10px 0;
+        margin-bottom: 10px;
+        padding: 8px 0;
     }
     
     .category-section, .theme-section {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     
     .category-section {
-        padding: 15px;
+        padding: 12px;
+    }
+    
+    .category-heading-container h2 {
+        font-size: 1.2rem;
     }
     
     .category-container {
