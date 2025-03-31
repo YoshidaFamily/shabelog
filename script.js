@@ -334,41 +334,9 @@ function shuffle() {
     document.getElementById('thema1_text').innerHTML = shuffledThemes[0]?.text || '';
     document.getElementById('thema2_text').innerHTML = shuffledThemes[1]?.text || '';
     document.getElementById('thema3_text').innerHTML = shuffledThemes[2]?.text || '';
-    
-    // テーマをクリック可能にする
-    makeThemesClickable();
-    
+
     // 表示された3つのテーマからランダムに1つを選んでレコメンド
     recommendRandomTheme();
-}
-
-function makeThemesClickable() {
-    // テーマのクリックイベントを無効化（クリックできなくする）
-    const themeElements = [
-        document.getElementById('thema1_text'),
-        document.getElementById('thema2_text'),
-        document.getElementById('thema3_text')
-    ];
-    
-    themeElements.forEach(element => {
-        if (element.innerHTML && element.innerHTML !== 'カテゴリを選択してください') {
-            element.classList.remove('selected');
-            element.classList.remove('recommended');
-            
-            // 「おすすめ！」ラベルを削除
-            const parent = element.parentElement;
-            const recommendLabel = parent.querySelector('.recommend-label');
-            if (recommendLabel) {
-                parent.removeChild(recommendLabel);
-            }
-            
-            // クリックイベントを無効化
-            element.onclick = null;
-            
-            // カーソルスタイルを変更して、クリック不可であることを視覚的に示す
-            element.parentElement.style.cursor = 'default';
-        }
-    });
 }
 
 function recommendRandomTheme() {
