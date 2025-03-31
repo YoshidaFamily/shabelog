@@ -175,20 +175,10 @@ header {
     min-height: 100px; /* 最低の高さを設定 */
 }
 
-.theme-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
 .theme-text {
     font-size: 1.2rem;
     color: #2c3e50;
     width: 100%; /* カード全体を使用 */
-}
-
-.theme-card .theme-text.selected {
-    color: #ff9800;
-    font-weight: bold;
 }
 
 .theme-card .theme-text.recommended {
