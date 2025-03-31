@@ -224,15 +224,131 @@ footer {
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
     .themes-container {
         flex-direction: column;
+        gap: 15px;
     }
     
     .theme-card {
         min-width: 100%;
+        min-height: 80px;
+        padding: 15px;
     }
     
     #title_text {
         font-size: 2rem;
+        margin-bottom: 5px;
+    }
+    
+    header {
+        margin-bottom: 20px;
+        padding: 15px 0;
+    }
+    
+    .category-section, .theme-section {
+        margin-bottom: 20px;
+    }
+    
+    .shuffle-button {
+        padding: 8px 25px;
+        font-size: 1.1rem;
+    }
+    
+    .theme-text {
+        font-size: 1.1rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .category-item label {
+        font-size: 0.9rem;
+    }
+    
+    .instruction {
+        font-size: 0.8rem;
+    }
+    
+    footer {
+        margin-top: 20px;
+        padding: 15px 0;
+        font-size: 0.8rem;
+    }
+}
+
+/* さらに小さい画面（スマートフォン）向けの調整 */
+@media (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+    
+    #title_text {
+        font-size: 1.5rem;
+    }
+    
+    header {
+        margin-bottom: 15px;
+        padding: 10px 0;
+    }
+    
+    .category-section, .theme-section {
+        margin-bottom: 15px;
+    }
+    
+    .category-section {
+        padding: 15px;
+    }
+    
+    .category-container {
+        gap: 5px;
+    }
+    
+    .category-item {
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .category-item label {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .category-heading-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .category-buttons {
+        margin-top: 0;
+    }
+    
+    .category-button {
+        padding: 3px 8px;
+        font-size: 0.7rem;
+    }
+    
+    .shuffle-button {
+        padding: 6px 20px;
+        font-size: 1rem;
+    }
+    
+    .theme-card {
+        min-height: 70px;
+        padding: 12px;
+    }
+    
+    .theme-text {
+        font-size: 1rem;
+    }
+    
+    .recommend-label {
+        font-size: 0.7rem;
+        padding: 3px 8px;
     }
 }
