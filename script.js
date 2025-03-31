@@ -249,7 +249,7 @@ function initCategoryUI() {
     categoryHeading.remove();
     
     const newHeading = document.createElement('h2');
-    newHeading.textContent = 'カテゴリ選択';
+    newHeading.textContent = 'カテゴリ';
     
     headingContainer.appendChild(newHeading);
     headingContainer.appendChild(buttonContainer);
