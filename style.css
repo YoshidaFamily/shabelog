@@ -22,10 +22,15 @@ body {
 
 /* ヘッダー */
 header {
-    text-align: center;
     margin-bottom: 20px;
     padding: 15px 0;
     border-bottom: 2px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #title_text {
@@ -123,13 +128,8 @@ header {
     margin-bottom: 30px;
 }
 
-.shuffle-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .shuffle-button {
-    padding: 10px 30px;
+    padding: 10px 20px;
     font-size: 1.2rem;
     background-color: #e74c3c;
     color: white;
@@ -241,7 +241,7 @@ footer {
     
     #title_text {
         font-size: 2rem;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
     
     header {
@@ -254,8 +254,8 @@ footer {
     }
     
     .shuffle-button {
-        padding: 8px 25px;
-        font-size: 1.1rem;
+        padding: 8px 15px;
+        font-size: 1rem;
     }
     
     .theme-text {
@@ -289,7 +289,7 @@ footer {
     
     #title_text {
         font-size: 1.5rem;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
     
     header {
@@ -339,8 +339,8 @@ footer {
     }
     
     .shuffle-button {
-        padding: 6px 20px;
-        font-size: 1rem;
+        padding: 5px 12px;
+        font-size: 0.9rem;
     }
     
     .theme-card {

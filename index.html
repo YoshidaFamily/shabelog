@@ -11,21 +11,13 @@
 <body>
     <div class="container">
         <header>
-            <h1 id="title_text">しゃべログ</h1>
-        </header>
-
-        <section class="category-section">
-            <h2>カテゴリ</h2>
-            <div id="category-container" class="category-container">
-                <!-- カテゴリチェックボックスがJSで動的に追加されます -->
-            </div>
-        </section>
-
-        <section class="theme-section">
-            <div class="shuffle-container">
+            <div class="header-container">
+                <h1 id="title_text">しゃべログ</h1>
                 <button class="shuffle-button" onclick="shuffle();">シャッフル</button>
             </div>
-            
+        </header>
+
+        <section class="theme-section">
             <div class="themes-container">
                 <div class="theme-card">
                     <h2 id="thema1_text" class="theme-text">テーマ1</h2>
@@ -36,6 +28,13 @@
                 <div class="theme-card">
                     <h2 id="thema3_text" class="theme-text">テーマ3</h2>
                 </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2>カテゴリ</h2>
+            <div id="category-container" class="category-container">
+                <!-- カテゴリチェックボックスがJSで動的に追加されます -->
             </div>
         </section>
         
