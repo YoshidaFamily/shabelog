@@ -343,7 +343,7 @@ function shuffle() {
 }
 
 function makeThemesClickable() {
-    // テーマをクリックしたら選択状態にする
+    // テーマのクリックイベントを無効化（クリックできなくする）
     const themeElements = [
         document.getElementById('thema1_text'),
         document.getElementById('thema2_text'),
@@ -362,24 +362,11 @@ function makeThemesClickable() {
                 parent.removeChild(recommendLabel);
             }
             
-            element.onclick = function() {
-                // 他の選択を解除
-                themeElements.forEach(el => {
-                    el.classList.remove('selected');
-                    
-                    // 「おすすめ！」ラベルを削除
-                    const p = el.parentElement;
-                    const recLabel = p.querySelector('.recommend-label');
-                    if (recLabel) {
-                        p.removeChild(recLabel);
-                    }
-                });
-                
-                // このテーマを選択
-                this.classList.add('selected');
-            };
-        } else {
+            // クリックイベントを無効化
             element.onclick = null;
+            
+            // カーソルスタイルを変更して、クリック不可であることを視覚的に示す
+            element.parentElement.style.cursor = 'default';
         }
     });
 }
