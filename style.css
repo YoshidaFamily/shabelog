@@ -47,10 +47,10 @@ header {
 /* カテゴリセクション */
 .category-section {
     margin-bottom: 30px;
-    background-color: #fff;
+    background-color: #e3f2fd; /* 薄い青色の背景 */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(33, 150, 243, 0.15); /* 青みがかった影 */
 }
 
 .category-heading-container {
@@ -130,8 +130,8 @@ header {
 
 .shuffle-button {
     padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #e74c3c;
+    font-size: 1rem; /* フォントサイズを小さく */
+    background-color: #ff9800; /* オレンジ色 */
     color: white;
     border: none;
     border-radius: 30px;
@@ -140,8 +140,14 @@ header {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
+.shuffle-icon {
+    font-size: 1.4rem; /* 絵文字のフォントサイズを大きく */
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .shuffle-button:hover {
-    background-color: #c0392b;
+    background-color: #f57c00; /* ホバー時はやや濃いオレンジ色 */
 }
 
 .themes-container {
@@ -155,10 +161,10 @@ header {
 .theme-card {
     flex: 1;
     min-width: 200px;
-    background-color: #fff;
+    background-color: #fff3e0; /* 薄いオレンジ色の背景 */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(255, 152, 0, 0.15); /* オレンジがかった影 */
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -181,21 +187,21 @@ header {
 }
 
 .theme-card .theme-text.selected {
-    color: #e74c3c;
+    color: #ff9800;
     font-weight: bold;
 }
 
 .theme-card .theme-text.recommended {
-    color: #e74c3c;
+    color: #ff9800;
     font-weight: bold;
-    border-bottom: 2px solid #e74c3c;
+    border-bottom: 2px solid #ff9800;
 }
 
 .recommend-label {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: #e74c3c;
+    background-color: #ff9800;
     color: white;
     padding: 5px 10px;
     border-radius: 15px;
